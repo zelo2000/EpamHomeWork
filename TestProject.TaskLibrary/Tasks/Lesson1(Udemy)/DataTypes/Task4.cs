@@ -7,32 +7,32 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.DataTypes
 {
     public class Task4 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Calculation with an arithmetic sign.
-            Console.Write("Input first number: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Input sign: ");
-            char sign = Convert.ToChar(Console.ReadLine());
-            Console.Write("Input second number: ");
-            double b = Convert.ToDouble(Console.ReadLine());
+            loger.Write("Input first number: ");
+            double a = Convert.ToDouble(loger.Read());
+            loger.Write("Input sign: ");
+            char sign = Convert.ToChar(loger.Read());
+            loger.Write("Input second number: ");
+            double b = Convert.ToDouble(loger.Read());
             switch (sign)
             {
                 case '+':
-                    Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+                    loger.Write(string.Format("{0} + {1} = {2}\n", a, b, a + b));
                     break;
                 case '-':
-                    Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+                    loger.Write(string.Format("{0} - {1} = {2}\n", a, b, a - b));
                     break;
                 case '*':
                 case 'x':
-                    Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+                    loger.Write(string.Format("{0} * {1} = {2}\n", a, b, a * b));
                     break;
                 case '/':
-                    Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+                    loger.Write(string.Format("{0} / {1} = {2}\n", a, b, a / b));
                     break;
                 default:
-                    Console.WriteLine("Wrong sign");
+                    loger.Write("Wrong sign\n");
                     break;
             }
         }

@@ -7,18 +7,18 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ForLoop
 {
     public class Task4 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Sum and avarage of ten numbers
             int sum = 0;
             for (var i = 0; i < 10; i++)
             {
-                Console.Write("The {0} number is: ", i + 1);
-                int number = Convert.ToInt32(Console.ReadLine());
+                loger.Write(string.Format("The {0} number is: ", i + 1));
+                int number = Convert.ToInt32(loger.Read());
                 sum += number;
             }
-            Console.WriteLine("\nThe sum is: " + sum);
-            Console.WriteLine("\nThe average is: " + sum / 10.0);
+            loger.Write("\nThe sum is: " + sum + "\n");
+            loger.Write("The average is: " + sum / 10.0 + "\n");
         }
     }
 }

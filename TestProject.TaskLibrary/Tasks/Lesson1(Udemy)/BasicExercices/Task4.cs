@@ -7,14 +7,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.BasicExercices
 {
     public class Task4 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Arithmetic operations.
-            Console.WriteLine("Random result: ");
-            Console.WriteLine(-1 + 4 * 6);
-            Console.WriteLine((35 + 5) % 7);
-            Console.WriteLine(14 + -4 * 6 / 11);
-            Console.WriteLine(2 + 15 / 6 * 1 - 7 % 2);
+            loger.Write("Random result: \n");
+            loger.Write((-1 + 4 * 6) + "\n");
+            loger.Write(((35 + 5) % 7) + "\n");
+            loger.Write((14 + -4 * 6 / 11) + "\n");
+            loger.Write((2 + 15 / 6 * 1 - 7 % 2) + "\n");
         }
     }
 }

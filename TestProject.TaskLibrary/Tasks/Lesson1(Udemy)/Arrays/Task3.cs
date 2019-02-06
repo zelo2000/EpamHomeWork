@@ -7,25 +7,25 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.Arrays
 {
     public class Task3 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Sum array element
-            Console.Write("Input amount: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            loger.Write("Input amount: ");
+            int number = Convert.ToInt32(loger.Read());
             int[] array = new int[number];
             for (int i = 0; i < number; i++)
             {
-                Console.Write("Element {0}: ", i);
-                array[i] = Convert.ToInt32(Console.ReadLine());
+                loger.Write(string.Format("Element {0}: ", i));
+                array[i] = Convert.ToInt32(loger.Read());
             }
 
-            Console.WriteLine("Sum: ");
+            loger.Write("Sum: ");
             int sum = 0;
             for (int i = 0; i < number; i++)
             {
                 sum += array[i];
             }
-            Console.WriteLine(sum);
+            loger.Write(sum + "\n");
         }
     }
 }

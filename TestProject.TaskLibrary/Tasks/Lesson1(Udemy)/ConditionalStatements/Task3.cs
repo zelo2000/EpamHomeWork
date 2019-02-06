@@ -7,19 +7,19 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ConditionalStatements
 {
     public class Task3 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Is number positive
-            Console.Write("Input number: ");
-            int a = Convert.ToInt32(Console.ReadLine());
+            loger.Write("Input number: ");
+            int a = Convert.ToInt32(loger.Read());
 
             if (a >= 0)
             {
-                Console.WriteLine("Number is positive");
+                loger.Write("Number is positive\n");
             }
             else
             {
-                Console.WriteLine("Number is negative");
+                loger.Write("Number is negative\n");
             }
         }
     }

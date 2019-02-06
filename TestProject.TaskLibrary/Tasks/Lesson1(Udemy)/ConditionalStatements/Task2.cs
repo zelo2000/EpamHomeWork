@@ -7,19 +7,19 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ConditionalStatements
 {
     public class Task2 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Is number even?
-            Console.Write("Input number: ");
-            int a = Convert.ToInt32(Console.ReadLine());
+            loger.Write("Input number: ");
+            int a = Convert.ToInt32(loger.Read());
 
             if (a % 2 == 0)
             {
-                Console.WriteLine("Number is even");
+                loger.Write("Number is even\n");
             }
             else
             {
-                Console.WriteLine("Number is odd");
+                loger.Write("Number is odd\n");
             }
         }
     }

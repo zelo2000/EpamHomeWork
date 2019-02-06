@@ -7,21 +7,21 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ConditionalStatements
 {
     public class Task1 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Are two numbers equal?
-            Console.Write("Input first number: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Input second number: ");
-            int b = Convert.ToInt32(Console.ReadLine());
+            loger.Write("Input first number: ");
+            int a = Convert.ToInt32(loger.Read());
+            loger.Write("Input second number: ");
+            int b = Convert.ToInt32(loger.Read());
 
             if (a == b)
             {
-                Console.WriteLine("Number are equal");
+                loger.Write("Number are equal\n");
             }
             else
             {
-                Console.WriteLine("Number are not equal");
+                loger.Write("Number are not equal\n");
             }
         }
     }

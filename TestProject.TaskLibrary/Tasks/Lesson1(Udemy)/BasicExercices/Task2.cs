@@ -7,14 +7,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.BasicExercices
 {
     public class Task2 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Add the numbers
-            Console.Write("Input first number: ");
-            double a = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Input second number: ");
-            double b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Add: " + (a + b));
+            loger.Write("Input first number: ");
+            double a = Convert.ToDouble(loger.Read());
+            loger.Write("Input second number: ");
+            double b = Convert.ToDouble(loger.Read());
+            loger.Write("Add: " + (a + b) + "\n");
         }
     }
 }
