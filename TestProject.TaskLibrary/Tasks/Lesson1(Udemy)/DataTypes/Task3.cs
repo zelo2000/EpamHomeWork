@@ -7,13 +7,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.DataTypes
 {
     public class Task3 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Password checker
-            Console.Write("Input id: ");
-            string id = Console.ReadLine();
-            Console.Write("Input password: ");
-            string password = Console.ReadLine();
+            loger.Write("Input id: ");
+            string id = loger.Read();
+            loger.Write("Input password: ");
+            string password = loger.Read();
 
             bool checker = false;
             for (var i = 2; i >= 0; i--)
@@ -25,21 +25,21 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.DataTypes
                 }
                 else
                 {
-                    Console.WriteLine("Access denied\n");
-                    Console.Write("Input id: ");
-                    id = Console.ReadLine();
-                    Console.Write("Input password: ");
-                    password = Console.ReadLine();
+                    loger.Write("Access denied\n");
+                    loger.Write("Input id: ");
+                    id = loger.Read();
+                    loger.Write("Input password: ");
+                    password = loger.Read();
                 }
             }
 
             if (checker)
             {
-                Console.WriteLine("Access allow");
+                loger.Write("Access allow\n");
             }
             else
             {
-                Console.WriteLine("Try later");
+                loger.Write("Try later\n");
             }
         }
     }

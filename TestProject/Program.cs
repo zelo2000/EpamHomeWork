@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using TestProject.Common.Core.Displayers;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject
@@ -46,11 +47,14 @@ namespace TestProject
                 new TaskLibrary.Tasks.Lesson1.Arrays.Task5()
             };
 
+            ConsoleLoger consoleLoger = new ConsoleLoger();
+
             foreach (var task in tasks)
             {
-                task.Run();
+                task.Run(consoleLoger);
             }
-            Console.ReadLine();
+
+            consoleLoger.ReadKey();
         }
     }
 }

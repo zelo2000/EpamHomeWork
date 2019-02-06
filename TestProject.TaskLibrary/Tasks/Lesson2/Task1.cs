@@ -7,7 +7,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2
 {
     public class Task1 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             throw new NotImplementedException();
         }

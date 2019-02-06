@@ -7,16 +7,16 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ForLoop
 {
     public class Task2 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Print sum of first ten number
             int sum = 0;
             for (var i = 1; i <= 10; i++)
             {
-                Console.Write(i + " ");
+                loger.Write(i + " ");
                 sum += i;
             }
-            Console.WriteLine("\nThe sum is: " + sum);
+            loger.Write("\nThe sum is: " + sum + "\n");
         }
     }
 }

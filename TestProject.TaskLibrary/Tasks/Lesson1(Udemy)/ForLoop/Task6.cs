@@ -7,14 +7,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ForLoop
 {
     public class Task6 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Multiplication table
-            Console.Write("Input number: ");
-            double a = Convert.ToDouble(Console.ReadLine());
+            loger.Write("Input number: ");
+            double a = Convert.ToDouble(loger.Read());
             for (var i = 1; i < 11; i++)
             {
-                Console.WriteLine("{0} * {1} = {2}", a, i, (a * i));
+                loger.Write(string.Format("{0} * {1} = {2}\n", a, i, (a * i)));
             }
         }
     }
