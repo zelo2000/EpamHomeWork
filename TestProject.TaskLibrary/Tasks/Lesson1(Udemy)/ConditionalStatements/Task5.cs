@@ -7,18 +7,18 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ConditionalStatements
 {
     public class Task5 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             //Are you can vote?
-            loger.Write("How old are you? ");
-            int a = Convert.ToInt32(loger.Read());
+            logger.Write("How old are you? ");
+            int a = Convert.ToInt32(logger.Read());
             if (a >= 18)
             {
-                loger.Write("Congratulation! You are eligible for casting your vote\n");
+                logger.Write("Congratulation! You are eligible for casting your vote\n");
             }
             else
             {
-                loger.Write("Sory. You are not eligible for casting your vote\n");
+                logger.Write("Sory. You are not eligible for casting your vote\n");
             }
         }
     }

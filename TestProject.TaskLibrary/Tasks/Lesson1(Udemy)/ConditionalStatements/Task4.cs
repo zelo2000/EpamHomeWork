@@ -7,18 +7,18 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ConditionalStatements
 {
     public class Task4 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             //Is year leap?
-            loger.Write("Input year: ");
-            int a = Convert.ToInt32(loger.Read());
+            logger.Write("Input year: ");
+            int a = Convert.ToInt32(logger.Read());
             if (((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0))
             {
-                loger.Write("Is a leap lear\n");
+                logger.Write("Is a leap lear\n");
             }
             else
             {
-                loger.Write("Is not a leap lear\n");
+                logger.Write("Is not a leap lear\n");
             }
         }
     }

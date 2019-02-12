@@ -7,10 +7,10 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.BasicExercices
 {
     public class Task1 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             //Output hello world
-            loger.Write("Hello:\nOleksandr Zelinskyi!\n");
+            logger.Write("Hello:\nOleksandr Zelinskyi!\n");
         }
     }
 }

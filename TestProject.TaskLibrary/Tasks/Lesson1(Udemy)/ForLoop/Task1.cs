@@ -7,14 +7,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ForLoop
 {
     public class Task1 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             //Print first ten numbers
             for (var i = 1; i <= 10; i++)
             {
-                loger.Write(i + " ");
+                logger.Write(i + " ");
             }
-            loger.Write("\n");
+            logger.Write("\n");
         }
     }
 }

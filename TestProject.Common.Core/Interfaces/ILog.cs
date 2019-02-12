@@ -10,6 +10,5 @@ namespace TestProject.Common.Core.Interfaces
 
         string Read();
 
-        void ReadKey();
     }
 }

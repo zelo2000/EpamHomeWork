@@ -7,18 +7,18 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.ForLoop
 {
     public class Task3 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             //Sun of n numbers
-            loger.Write("Input n: ");
-            int n = Convert.ToInt32(loger.Read());
+            logger.Write("Input n: ");
+            int n = Convert.ToInt32(logger.Read());
             int sum = 0;
             for (var i = 1; i <= n; i++)
             {
-                loger.Write(i + " ");
+                logger.Write(i + " ");
                 sum += i;
             }
-            loger.Write("\nThe sum is: " + sum + "\n");
+            logger.Write("\nThe sum is: " + sum + "\n");
         }
     }
 }

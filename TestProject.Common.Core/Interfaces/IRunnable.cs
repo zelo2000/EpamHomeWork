@@ -7,6 +7,6 @@ namespace TestProject.Common.Core.Interfaces
 {
     public interface IRunnable
     {
-        void Run(ILog loger);
+        void Run(ILog logger);
     }
 }

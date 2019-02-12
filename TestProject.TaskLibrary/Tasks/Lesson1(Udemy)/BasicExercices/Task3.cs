@@ -7,14 +7,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1.BasicExercices
 {
     public class Task3 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             //Divide the numbers.
-            loger.Write("Input first number: ");
-            double a = Convert.ToDouble(loger.Read());
-            loger.Write("Input second number: ");
-            double b = Convert.ToDouble(loger.Read());
-            loger.Write("Div: " + (a / b) + "\n");
+            logger.Write("Input first number: ");
+            double a = Convert.ToDouble(logger.Read());
+            logger.Write("Input second number: ");
+            double b = Convert.ToDouble(logger.Read());
+            logger.Write("Div: " + (a / b) + "\n");
         }
     }
 }
